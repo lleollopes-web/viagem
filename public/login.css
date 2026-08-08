@@ -1,0 +1,127 @@
+:root {
+  --paper: #f2e8d8;
+  --pine: #2f4a3e;
+  --pine-dark: #203830;
+  --wine: #7a2e33;
+  --wood-dark: #33261c;
+  --gold: #b8923f;
+  --ink: #1c1815;
+  --ink-soft: #46392f;
+
+  --f-display: "Fraunces", "Iowan Old Style", serif;
+  --f-body: "Literata", Georgia, serif;
+  --f-hand: "Caveat", cursive;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--wood-dark);
+  font-family: var(--f-body);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-image: radial-gradient(ellipse at 50% -10%, rgba(255,255,255,0.06), transparent 45%);
+}
+
+.capa {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.capa__cartao {
+  width: 100%;
+  max-width: 360px;
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.capa__cadeado {
+  color: var(--pine-dark);
+  margin-bottom: 10px;
+}
+
+.capa__cartao h1 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--pine-dark);
+  margin: 0;
+}
+
+.capa__sub {
+  font-family: var(--f-hand);
+  color: var(--wine);
+  font-size: 1.1rem;
+  margin: 6px 0 26px;
+}
+
+.capa__campo {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.capa__campo span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 5px;
+}
+
+.capa__campo input {
+  width: 100%;
+  font-family: var(--f-body);
+  font-size: 1.05rem;
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1px solid #d8c8a6;
+  border-radius: 6px;
+  background: #fffdf8;
+}
+
+.capa__campo input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,146,63,0.2);
+}
+
+.capa__botao {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: var(--pine);
+  color: var(--paper);
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.capa__botao:hover { background: var(--pine-dark); }
+.capa__botao:disabled { opacity: 0.6; cursor: default; }
+
+.capa__erro {
+  color: var(--wine);
+  font-size: 0.88rem;
+  min-height: 1.2em;
+  margin: 14px 0 0;
+}

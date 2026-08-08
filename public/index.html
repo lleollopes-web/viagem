@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diário da Serra — Gramado 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Literata:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo__titulo">
+      <span class="topo__selo">11 – 22 ago 2026</span>
+      <h1>Diário da Serra</h1>
+      <p class="topo__sub">Uma viagem a Gramado</p>
+    </div>
+    <div class="topo__acoes">
+      <button id="btn-editar" class="botao botao--fantasma" type="button" aria-pressed="false">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 20h4l10-10-4-4L4 16v4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <span>Editar</span>
+      </button>
+      <a href="/api/logout" class="link-sair">Sair</a>
+    </div>
+  </header>
+
+  <main class="mesa">
+    <div class="caderno" id="caderno">
+
+      <nav class="lombada" id="lombada" aria-label="Dias da viagem"></nav>
+
+      <section class="folha folha--esquerda" id="folha-esquerda">
+        <div class="folha__marca-agua" id="marca-agua-esquerda"></div>
+        <div class="folha__conteudo" id="conteudo-esquerda"></div>
+      </section>
+
+      <section class="folha folha--direita" id="folha-direita">
+        <div class="folha__marca-agua" id="marca-agua-direita"></div>
+        <div class="folha__conteudo" id="conteudo-direita"></div>
+      </section>
+
+    </div>
+
+    <div class="navegacao">
+      <button id="btn-anterior" class="botao botao--pagina" type="button" aria-label="Página anterior">‹ dia anterior</button>
+      <span id="indicador-pagina" class="navegacao__indicador"></span>
+      <button id="btn-proximo" class="botao botao--pagina" type="button" aria-label="Próxima página">próximo dia ›</button>
+    </div>
+  </main>
+
+  <div id="aviso-salvo" class="aviso-salvo" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

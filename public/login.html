@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diário da Serra — entrar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Literata:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="capa">
+    <form class="capa__cartao" id="form-login">
+      <span class="capa__cadeado" aria-hidden="true">
+        <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="15" width="22" height="17" rx="2.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M9 15V10a6 6 0 0 1 12 0v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="15" cy="22.5" r="2.2" fill="currentColor"/>
+        </svg>
+      </span>
+      <h1>Diário da Serra</h1>
+      <p class="capa__sub">Uma viagem a Gramado · 11–22 ago 2026</p>
+
+      <label class="capa__campo">
+        <span>Usuário</span>
+        <input type="text" id="campo-usuario" autocomplete="username" autocapitalize="off" required />
+      </label>
+
+      <label class="capa__campo">
+        <span>Senha</span>
+        <input type="password" id="campo-senha" autocomplete="current-password" required />
+      </label>
+
+      <button type="submit" class="capa__botao">Abrir o diário</button>
+      <p class="capa__erro" id="mensagem-erro" role="alert" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
